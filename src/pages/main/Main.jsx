@@ -41,7 +41,7 @@ const Main = ()=> {
         <div className="container">
          <div className="flex-container flex-row stock__top"> 
           <h2 className='sectionhead'>Акции</h2>
-          <span className="alltittle">Все акции</span>
+          <a className="alltittle" href='#'>Все акции</a>
          </div>
          <div className="stocklist flex-container flex-row">   
           {ElementsHTML}
@@ -53,7 +53,7 @@ const Main = ()=> {
         <div className="container">
          <div className="flex-container flex-row stock__top"> 
           <h2 className='sectionhead'>Новинки</h2>
-          <span className="alltittle">Все новинки</span>
+          <a className="alltittle" href='#'>Все новинки</a>
          </div>
          <div className="stocklist flex-container flex-row">   
           <StockBlock/>
@@ -67,7 +67,7 @@ const Main = ()=> {
         <div className="container">
          <div className="flex-container flex-row stock__top"> 
           <h2 className='sectionhead'>Покупали раньше</h2>
-          <span className="alltittle">Все покупки</span>
+          <a href='#' className="alltittle">Все покупки</a>
          </div>
          <div className="stocklist flex-container flex-row">   
           <StockBlock/>
@@ -88,7 +88,7 @@ const Main = ()=> {
             <div className="flex-container flex-row">
               <div>
               <span className="novelties__tittle">Оформите карту  <br /> «Северяночка»</span> <br />
-            <span className="novelties__subtittle">И получайте бонусы при покупке <br /> в магазинах и на сайте</span>       
+              <span className="novelties__subtittle">И получайте бонусы при покупке <br /> в магазинах и на сайте</span>       
               </div>
               <div>
                 <img src={cardImage} alt="" />
@@ -120,7 +120,7 @@ const Main = ()=> {
             <button className="citybutton">с.Краснобор</button> 
             <button className="citybutton">д.Диюр</button>
           </div>
-          <img src={mapLink} alt="" className='novelties__map' />
+          <iframe  className='novelties__map' src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa962a0cf5abc6ab88f179ae235fa5a19c5a48835638179d670c48d9780cf126e&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
         </div>
       </section>
       <section className="article">
@@ -130,17 +130,9 @@ const Main = ()=> {
           <span className="alltittle">Все статьи</span>
          </div>
          <div className="flex-container flex-row">
-          <div className='article__item'>
-            <img src={doctorImage} alt="" /> <br />
-           <div className="article__content">
-           <span className='article__date'>05.03.2021</span> <br />
-            <h2 className="article__tittle">Режим использования масок и <br /> перчаток на территории магазинов</h2>
-            <p className='article__description'>Подробная информация о режимах использования масок и перчаток на территории магазинов "ЛЕНТА". Информация обновляется каждый будний день.</p>
-            <a href="" className="button article__button article">Подробнее</a>
-           </div>
-          </div>
-          <div className='article__item'>
-            <img src={springImage} alt="" /> <br />
+   
+         <div className='article__item'>
+            <img src={springImage} alt=""   className='article__image' /> <br />
             <div className="article__content">
             <span className='article__date'>05.03.2021</span> <br />
             <h2 className="article__tittle">Весеннее настроение для каждой</h2>
@@ -150,7 +142,17 @@ const Main = ()=> {
             
           </div>
           <div className='article__item'>
-            <img src={foodImage} alt="" /> <br />
+            <img src={doctorImage} alt=""   className='article__image' /> <br />
+            <div className="article__content">
+            <span className='article__date'>05.03.2021</span> <br />
+            <h2 className="article__tittle">Режим использования масок и перчаток</h2>
+            <p className='article__description'>Подробная информация о режимах использования масок и перчаток на территории магазинов "ЛЕНТА". Информация обновляется каждый будний день.</p>
+            <a href="" className="button article__button article">Подробнее</a>
+            </div>
+            
+          </div>
+          <div className='article__item'>
+            <img src={foodImage} alt=""   className='article__image' /> <br />
             <div className="article__content">
             <span className='article__date'>22.02.2020</span> <br />
             <h2 className="article__tittle">ЗОЖ или ФАСТФУД. А вы на чьей стороне? Голосуем!</h2>

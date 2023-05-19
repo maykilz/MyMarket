@@ -98,19 +98,37 @@
 }
 .article {
   &__item {
-    width: 33%;
+    width: 33%; 
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 410px;
+  }
+  &__tittle, &__description {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  &__image {
+    display: block;
+    height: 175px;   
+    object-fit: cover;
   }
   &__button {
     width: 150px;
     padding: 8px; 
-
+    margin-top: 10px;
   }
   &__content {
     padding: 10px; 
+    position: absolute;
+    bottom: 0px;
   }
 }
 }
 .article {
+  &__item {
+    background: #fff;
+  }
   &__button {
     color: #70C05B;
     background: #E5FFDE;
